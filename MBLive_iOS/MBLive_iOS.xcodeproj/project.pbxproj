@@ -18,6 +18,7 @@
 		51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F7204E762D00631AAF /* MBTopWindow.m */; };
 		51B939FB204E76AD00631AAF /* UIView+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939FA204E76AD00631AAF /* UIView+MBExtension.m */; };
 		51B93A2F204E852600631AAF /* MBHomeLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A2E204E852600631AAF /* MBHomeLiveModel.m */; };
+		51B93A31204E8B3A00631AAF /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -83,6 +84,7 @@
 		51B939FA204E76AD00631AAF /* UIView+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MBExtension.m"; sourceTree = "<group>"; };
 		51B93A2D204E852600631AAF /* MBHomeLiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHomeLiveModel.h; sourceTree = "<group>"; };
 		51B93A2E204E852600631AAF /* MBHomeLiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHomeLiveModel.m; sourceTree = "<group>"; };
+		51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				5105C8BE204E3C3D000848CD /* UIKit.framework in Frameworks */,
 				51F57567204D34CA0030CFD1 /* libstdc++.tbd in Frameworks */,
 				51F57565204D34AF0030CFD1 /* VideoToolbox.framework in Frameworks */,
+				51B93A31204E8B3A00631AAF /* IJKMediaFramework.framework in Frameworks */,
 				51F57563204D34A20030CFD1 /* QuartzCore.framework in Frameworks */,
 				51F57561204D34990030CFD1 /* OpenGLES.framework in Frameworks */,
 				51F5755F204D34900030CFD1 /* MobileCoreServices.framework in Frameworks */,
@@ -189,13 +192,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5105C8B9204E34C2000848CD /* New Group */ = {
+		5105C8B9204E34C2000848CD /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5105C8BA204E34E4000848CD /* MBThirdLogin.h */,
 				5105C8BB204E34E4000848CD /* MBThirdLogin.m */,
 			);
-			path = "New Group";
+			path = View;
 			sourceTree = "<group>";
 		};
 		51B93A2C204E84C900631AAF /* Model */ = {
@@ -315,6 +318,7 @@
 				5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */,
 				51B939F9204E76AD00631AAF /* UIView+MBExtension.h */,
 				51B939FA204E76AD00631AAF /* UIView+MBExtension.m */,
+				51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -355,7 +359,7 @@
 		51F8D914204929DA00B9A10C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				5105C8B9204E34C2000848CD /* New Group */,
+				5105C8B9204E34C2000848CD /* View */,
 				51F8D935204AA0BA00B9A10C /* Controller */,
 			);
 			path = Login;
