@@ -7,8 +7,11 @@
 //
 
 #import "MBHomeViewController.h"
+#import "MBSelectedView.h"
 
 @interface MBHomeViewController ()
+/** 顶部选择视图 */
+@property(nonatomic, assign) MBSelectedView *selectedView;
 
 @end
 

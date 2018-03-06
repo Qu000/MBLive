@@ -19,6 +19,8 @@
 		51B939FB204E76AD00631AAF /* UIView+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939FA204E76AD00631AAF /* UIView+MBExtension.m */; };
 		51B93A2F204E852600631AAF /* MBHomeLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A2E204E852600631AAF /* MBHomeLiveModel.m */; };
 		51B93A31204E8B3A00631AAF /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */; };
+		51B93A35204E8CB000631AAF /* MBSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A34204E8CB000631AAF /* MBSelectedView.m */; };
+		51B93A39204E8E0300631AAF /* MBConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A38204E8E0300631AAF /* MBConstant.m */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -85,6 +87,10 @@
 		51B93A2D204E852600631AAF /* MBHomeLiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHomeLiveModel.h; sourceTree = "<group>"; };
 		51B93A2E204E852600631AAF /* MBHomeLiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHomeLiveModel.m; sourceTree = "<group>"; };
 		51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		51B93A33204E8CB000631AAF /* MBSelectedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBSelectedView.h; sourceTree = "<group>"; };
+		51B93A34204E8CB000631AAF /* MBSelectedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSelectedView.m; sourceTree = "<group>"; };
+		51B93A37204E8E0300631AAF /* MBConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBConstant.h; sourceTree = "<group>"; };
+		51B93A38204E8E0300631AAF /* MBConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBConstant.m; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -210,6 +216,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		51B93A32204E8C8D00631AAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51B93A33204E8CB000631AAF /* MBSelectedView.h */,
+				51B93A34204E8CB000631AAF /* MBSelectedView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		51F57549204D2BB90030CFD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +297,7 @@
 		51F8D90A204929DA00B9A10C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				51B93A32204E8C8D00631AAF /* View */,
 				51B93A2C204E84C900631AAF /* Model */,
 				51F8D91B20492B4100B9A10C /* Controller */,
 			);
@@ -318,6 +334,8 @@
 				5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */,
 				51B939F9204E76AD00631AAF /* UIView+MBExtension.h */,
 				51B939FA204E76AD00631AAF /* UIView+MBExtension.m */,
+				51B93A37204E8E0300631AAF /* MBConstant.h */,
+				51B93A38204E8E0300631AAF /* MBConstant.m */,
 				51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */,
 			);
 			path = Other;
@@ -660,6 +678,8 @@
 				51B939FB204E76AD00631AAF /* UIView+MBExtension.m in Sources */,
 				5105C8C5204E3E66000848CD /* UIDevice+MBExtension.m in Sources */,
 				5105C8BC204E34E4000848CD /* MBThirdLogin.m in Sources */,
+				51B93A39204E8E0300631AAF /* MBConstant.m in Sources */,
+				51B93A35204E8CB000631AAF /* MBSelectedView.m in Sources */,
 				51F8D8EA2048E8F000B9A10C /* ViewController.m in Sources */,
 				51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */,
 				51B939F0204E738C00631AAF /* Reachability.m in Sources */,

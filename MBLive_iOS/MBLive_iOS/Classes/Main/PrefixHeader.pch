@@ -27,6 +27,7 @@
 #import "NSObject+MBHUD.h"
 #import "UIView+MBExtension.h"
 #import "MBNetworkTool.h"
+#import "MBConstant.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #endif /* PrefixHeader_pch */
 
