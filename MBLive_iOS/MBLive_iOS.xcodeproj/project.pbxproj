@@ -21,6 +21,9 @@
 		51B93A31204E8B3A00631AAF /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */; };
 		51B93A35204E8CB000631AAF /* MBSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A34204E8CB000631AAF /* MBSelectedView.m */; };
 		51B93A39204E8E0300631AAF /* MBConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A38204E8E0300631AAF /* MBConstant.m */; };
+		51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A3B204E8FE000631AAF /* MBHotVc.m */; };
+		51B93A43204E90FB00631AAF /* MBHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A41204E90FB00631AAF /* MBHotCell.m */; };
+		51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B93A42204E90FB00631AAF /* MBHotCell.xib */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -91,6 +94,11 @@
 		51B93A34204E8CB000631AAF /* MBSelectedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSelectedView.m; sourceTree = "<group>"; };
 		51B93A37204E8E0300631AAF /* MBConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBConstant.h; sourceTree = "<group>"; };
 		51B93A38204E8E0300631AAF /* MBConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBConstant.m; sourceTree = "<group>"; };
+		51B93A3A204E8FE000631AAF /* MBHotVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHotVc.h; sourceTree = "<group>"; };
+		51B93A3B204E8FE000631AAF /* MBHotVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHotVc.m; sourceTree = "<group>"; };
+		51B93A40204E90FB00631AAF /* MBHotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHotCell.h; sourceTree = "<group>"; };
+		51B93A41204E90FB00631AAF /* MBHotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHotCell.m; sourceTree = "<group>"; };
+		51B93A42204E90FB00631AAF /* MBHotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBHotCell.xib; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -225,6 +233,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		51B93A3D204E908800631AAF /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				51B93A3F204E90AE00631AAF /* View */,
+				51B93A3E204E909E00631AAF /* Controller */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		51B93A3E204E909E00631AAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51B93A3A204E8FE000631AAF /* MBHotVc.h */,
+				51B93A3B204E8FE000631AAF /* MBHotVc.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51B93A3F204E90AE00631AAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51B93A40204E90FB00631AAF /* MBHotCell.h */,
+				51B93A41204E90FB00631AAF /* MBHotCell.m */,
+				51B93A42204E90FB00631AAF /* MBHotCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		51F57549204D2BB90030CFD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +336,7 @@
 				51B93A32204E8C8D00631AAF /* View */,
 				51B93A2C204E84C900631AAF /* Model */,
 				51F8D91B20492B4100B9A10C /* Controller */,
+				51B93A3D204E908800631AAF /* Hot */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -548,6 +585,7 @@
 			files = (
 				51F8D8F22048E8F000B9A10C /* LaunchScreen.storyboard in Resources */,
 				51F8D8EF2048E8F000B9A10C /* Assets.xcassets in Resources */,
+				51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */,
 				51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */,
 				51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */,
 				5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */,
@@ -668,6 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */,
 				51F8D92220492BE100B9A10C /* MBHomeViewController.m in Sources */,
 				51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
@@ -683,6 +722,7 @@
 				51F8D8EA2048E8F000B9A10C /* ViewController.m in Sources */,
 				51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */,
 				51B939F0204E738C00631AAF /* Reachability.m in Sources */,
+				51B93A43204E90FB00631AAF /* MBHotCell.m in Sources */,
 				51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */,
 				51F8D934204A8CAD00B9A10C /* MBNavigationController.m in Sources */,
 				51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */,
