@@ -30,6 +30,8 @@
 #import "MBConstant.h"
 #import <UIImageView+WebCache.h>
 #import "UIImage+MBExtension.h"
+#import "UIViewController+MBExtension.h"
+#import <MJExtension.h>
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #endif /* PrefixHeader_pch */
 

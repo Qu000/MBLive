@@ -25,6 +25,13 @@
 		51B93A43204E90FB00631AAF /* MBHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A41204E90FB00631AAF /* MBHotCell.m */; };
 		51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B93A42204E90FB00631AAF /* MBHotCell.xib */; };
 		51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */; };
+		51ED0012204F832600B9C7AF /* MBRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0011204F832600B9C7AF /* MBRefresh.m */; };
+		51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0014204F85D500B9C7AF /* UIViewController+MBExtension.m */; };
+		51ED0018204F865B00B9C7AF /* UIImageView+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0017204F865B00B9C7AF /* UIImageView+MBExtension.m */; };
+		51ED001C204F87A700B9C7AF /* MBHotADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED001B204F87A700B9C7AF /* MBHotADModel.m */; };
+		51ED001F204F8AFA00B9C7AF /* MBHotADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED001E204F8AFA00B9C7AF /* MBHotADCell.m */; };
+		51ED0023204F8B8000B9C7AF /* MBBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0022204F8B8000B9C7AF /* MBBannerView.m */; };
+		51ED0026204F959700B9C7AF /* MBWebVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0025204F959700B9C7AF /* MBWebVc.m */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -102,6 +109,20 @@
 		51B93A42204E90FB00631AAF /* MBHotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBHotCell.xib; sourceTree = "<group>"; };
 		51ED000D204F7C6100B9C7AF /* UIImage+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MBExtension.h"; sourceTree = "<group>"; };
 		51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MBExtension.m"; sourceTree = "<group>"; };
+		51ED0010204F832600B9C7AF /* MBRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBRefresh.h; sourceTree = "<group>"; };
+		51ED0011204F832600B9C7AF /* MBRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBRefresh.m; sourceTree = "<group>"; };
+		51ED0013204F85D500B9C7AF /* UIViewController+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBExtension.h"; sourceTree = "<group>"; };
+		51ED0014204F85D500B9C7AF /* UIViewController+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBExtension.m"; sourceTree = "<group>"; };
+		51ED0016204F865B00B9C7AF /* UIImageView+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MBExtension.h"; sourceTree = "<group>"; };
+		51ED0017204F865B00B9C7AF /* UIImageView+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MBExtension.m"; sourceTree = "<group>"; };
+		51ED001A204F87A700B9C7AF /* MBHotADModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHotADModel.h; sourceTree = "<group>"; };
+		51ED001B204F87A700B9C7AF /* MBHotADModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHotADModel.m; sourceTree = "<group>"; };
+		51ED001D204F8AFA00B9C7AF /* MBHotADCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHotADCell.h; sourceTree = "<group>"; };
+		51ED001E204F8AFA00B9C7AF /* MBHotADCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHotADCell.m; sourceTree = "<group>"; };
+		51ED0021204F8B8000B9C7AF /* MBBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBBannerView.h; sourceTree = "<group>"; };
+		51ED0022204F8B8000B9C7AF /* MBBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBBannerView.m; sourceTree = "<group>"; };
+		51ED0024204F959700B9C7AF /* MBWebVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBWebVc.h; sourceTree = "<group>"; };
+		51ED0025204F959700B9C7AF /* MBWebVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBWebVc.m; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -239,6 +260,7 @@
 		51B93A3D204E908800631AAF /* Hot */ = {
 			isa = PBXGroup;
 			children = (
+				51ED0019204F878300B9C7AF /* Model */,
 				51B93A3F204E90AE00631AAF /* View */,
 				51B93A3E204E909E00631AAF /* Controller */,
 			);
@@ -250,6 +272,8 @@
 			children = (
 				51B93A3A204E8FE000631AAF /* MBHotVc.h */,
 				51B93A3B204E8FE000631AAF /* MBHotVc.m */,
+				51ED0024204F959700B9C7AF /* MBWebVc.h */,
+				51ED0025204F959700B9C7AF /* MBWebVc.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,11 +281,32 @@
 		51B93A3F204E90AE00631AAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				51ED0020204F8B2400B9C7AF /* Banner */,
 				51B93A40204E90FB00631AAF /* MBHotCell.h */,
 				51B93A41204E90FB00631AAF /* MBHotCell.m */,
 				51B93A42204E90FB00631AAF /* MBHotCell.xib */,
+				51ED001D204F8AFA00B9C7AF /* MBHotADCell.h */,
+				51ED001E204F8AFA00B9C7AF /* MBHotADCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		51ED0019204F878300B9C7AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51ED001A204F87A700B9C7AF /* MBHotADModel.h */,
+				51ED001B204F87A700B9C7AF /* MBHotADModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51ED0020204F8B2400B9C7AF /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				51ED0021204F8B8000B9C7AF /* MBBannerView.h */,
+				51ED0022204F8B8000B9C7AF /* MBBannerView.m */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		51F57549204D2BB90030CFD1 /* Resource */ = {
@@ -379,6 +424,12 @@
 				51B93A37204E8E0300631AAF /* MBConstant.h */,
 				51B93A38204E8E0300631AAF /* MBConstant.m */,
 				51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */,
+				51ED0010204F832600B9C7AF /* MBRefresh.h */,
+				51ED0011204F832600B9C7AF /* MBRefresh.m */,
+				51ED0013204F85D500B9C7AF /* UIViewController+MBExtension.h */,
+				51ED0014204F85D500B9C7AF /* UIViewController+MBExtension.m */,
+				51ED0016204F865B00B9C7AF /* UIImageView+MBExtension.h */,
+				51ED0017204F865B00B9C7AF /* UIImageView+MBExtension.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -614,9 +665,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MBLive_iOS/Pods-MBLive_iOS-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -712,17 +766,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */,
+				51ED0023204F8B8000B9C7AF /* MBBannerView.m in Sources */,
+				51ED001F204F8AFA00B9C7AF /* MBHotADCell.m in Sources */,
 				51F8D92220492BE100B9A10C /* MBHomeViewController.m in Sources */,
 				51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,
 				51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */,
+				51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */,
 				51F8D931204A698500B9A10C /* MBTabBarController.m in Sources */,
+				51ED0026204F959700B9C7AF /* MBWebVc.m in Sources */,
 				51F8D915204929DA00B9A10C /* main.m in Sources */,
 				51B939FB204E76AD00631AAF /* UIView+MBExtension.m in Sources */,
 				5105C8C5204E3E66000848CD /* UIDevice+MBExtension.m in Sources */,
 				5105C8BC204E34E4000848CD /* MBThirdLogin.m in Sources */,
 				51B93A39204E8E0300631AAF /* MBConstant.m in Sources */,
+				51ED0012204F832600B9C7AF /* MBRefresh.m in Sources */,
 				51B93A35204E8CB000631AAF /* MBSelectedView.m in Sources */,
 				51F8D8EA2048E8F000B9A10C /* ViewController.m in Sources */,
 				51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */,
@@ -732,6 +791,8 @@
 				51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */,
 				51F8D934204A8CAD00B9A10C /* MBNavigationController.m in Sources */,
 				51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */,
+				51ED001C204F87A700B9C7AF /* MBHotADModel.m in Sources */,
+				51ED0018204F865B00B9C7AF /* UIImageView+MBExtension.m in Sources */,
 				51F8D92E20492C9B00B9A10C /* MBProfileViewController.m in Sources */,
 				51B93A2F204E852600631AAF /* MBHomeLiveModel.m in Sources */,
 				51F8D92520492C5D00B9A10C /* MBFollowViewController.m in Sources */,

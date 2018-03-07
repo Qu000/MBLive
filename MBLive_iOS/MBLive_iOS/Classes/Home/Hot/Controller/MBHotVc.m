@@ -7,7 +7,13 @@
 //
 
 #import "MBHotVc.h"
+#import "MBHotCell.h"
+#import "MBHotADCell.h"
+#import "MBRefresh.h"
+#import "MBWebVc.h"
 
+#import "MBHomeLiveModel.h"
+#import "MBHotADModel.h"
 @interface MBHotVc ()
 /** 当前页码数 */
 @property(nonatomic, assign) NSUInteger currentPage;
@@ -17,16 +23,79 @@
 @property(nonatomic, strong) NSArray *topADS;
 @end
 
+static NSString *reuseIdentifier = @"MBHotCell";
+static NSString *ADReuseIdentifier = @"MBHotADCell";
 @implementation MBHotVc
+
+
+- (NSMutableArray *)lives
+{
+    if (!_lives) {
+        _lives = [NSMutableArray array];
+    }
+    return _lives;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupUI];
+}
+
+- (void)setupUI{
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MBHotCell class]) bundle:nil] forCellReuseIdentifier:reuseIdentifier];
+    [self.tableView registerClass:[MBHotADCell class] forCellReuseIdentifier:ADReuseIdentifier];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.currentPage = 1;
+    self.tableView.mj_header = [MBRefresh headerWithRefreshingBlock:^{
+        self.lives = [NSMutableArray array];
+        self.currentPage = 1;
+        
+        [self getTopAD];
+        [self getHotLiveList];
+    }];
+    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        self.currentPage++;
+        [self getHotLiveList];
+    }];
+    
+    [self.tableView.mj_header beginRefreshing];
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+- (void)getTopAD{
+    [[MBNetworkTool shareTool] GET:@"http://live.9158.com/Living/GetAD" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray * result = responseObject[@"data"];
+        if ([self isNotEmpty:result]) {
+            self.topADS = [MBHotADModel mj_objectArrayWithKeyValuesArray:result];
+            [self.tableView reloadData];
+        }else {
+            [self showHint:@"网络异常"];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self showHint:@"网络异常"];
+    }];
+}
+- (void)getHotLiveList{
+    [[MBNetworkTool shareTool] GET:[NSString stringWithFormat:@"http://live.9158.com/Fans/GetHotLive?page=%ld",self.currentPage] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        NSArray * result = [MBHomeLiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+        if ([self isNotEmpty:result]) {
+            [self.lives addObjectsFromArray:result];
+            [self.tableView reloadData];
+        }else {
+            [self showHint:@"暂时没有更多最新数据"];
+            // 恢复当前页
+            self.currentPage--;
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        self.currentPage--;
+        [self showHint:@"网络异常"];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,66 +107,49 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.lives.count + 1;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return 100;
+    }
+    return 465;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    if (indexPath.row == 0) {
+        MBHotADCell * cell = [tableView dequeueReusableCellWithIdentifier:ADReuseIdentifier];
+        if (self.topADS.count) {
+            cell.topADs = self.topADS;
+            [cell setImageClickBlock:^(MBHotADModel *topAD) {
+                if (topAD.link.length) {
+                    MBWebVc * webVc = [[MBWebVc alloc]initWithUrlStr:topAD.link];
+                    webVc.navigationItem.title = topAD.title;
+                    [self.navigationController pushViewController:webVc animated:YES];
+                }
+            }];
+        }
+        return cell;
+    }
     
-    // Configure the cell...
+    
+    MBHotCell * cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (self.lives.count) {
+        MBHomeLiveModel * live = self.lives[indexPath.row-1];
+        cell.model = live;
+    }
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
