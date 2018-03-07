@@ -37,6 +37,7 @@
 		51ED0036204FDC8600B9C7AF /* MBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0035204FDC8600B9C7AF /* MBUser.m */; };
 		51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0039204FDE0900B9C7AF /* MBAnchorViewCell.m */; };
 		51ED003C204FDE0900B9C7AF /* MBAnchorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ED003A204FDE0900B9C7AF /* MBAnchorViewCell.xib */; };
+		51ED003F204FE24600B9C7AF /* MBNewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED003E204FE24600B9C7AF /* MBNewFlowLayout.m */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -137,6 +138,8 @@
 		51ED0038204FDE0900B9C7AF /* MBAnchorViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAnchorViewCell.h; sourceTree = "<group>"; };
 		51ED0039204FDE0900B9C7AF /* MBAnchorViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAnchorViewCell.m; sourceTree = "<group>"; };
 		51ED003A204FDE0900B9C7AF /* MBAnchorViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBAnchorViewCell.xib; sourceTree = "<group>"; };
+		51ED003D204FE24600B9C7AF /* MBNewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBNewFlowLayout.h; sourceTree = "<group>"; };
+		51ED003E204FE24600B9C7AF /* MBNewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBNewFlowLayout.m; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				51ED0038204FDE0900B9C7AF /* MBAnchorViewCell.h */,
 				51ED0039204FDE0900B9C7AF /* MBAnchorViewCell.m */,
 				51ED003A204FDE0900B9C7AF /* MBAnchorViewCell.xib */,
+				51ED003D204FE24600B9C7AF /* MBNewFlowLayout.h */,
+				51ED003E204FE24600B9C7AF /* MBNewFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -834,6 +839,7 @@
 				51ED001F204F8AFA00B9C7AF /* MBHotADCell.m in Sources */,
 				51F8D92220492BE100B9A10C /* MBHomeViewController.m in Sources */,
 				51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */,
+				51ED003F204FE24600B9C7AF /* MBNewFlowLayout.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
 				51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,

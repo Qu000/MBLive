@@ -8,7 +8,6 @@
 
 #import "MBHomeViewController.h"
 #import "MBSelectedView.h"
-#import "JHMainTopView.h"
 #import "MBHotVc.h"
 #import "MBNewVc.h"
 #import "MBFollowVc.h"
@@ -22,7 +21,6 @@
 
 @property (nonatomic, strong) NSArray * dataList;
 
-@property (nonatomic, strong) JHMainTopView * topView;
 /** 热播 */
 @property(nonatomic, weak) MBHotVc *hotVc;
 /** 最新主播 */
@@ -102,7 +100,6 @@
 - (void)setupNav{
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search_15x14"] style:UIBarButtonItemStyleDone target:self action:nil];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"head_crown_24x24"] style:UIBarButtonItemStyleDone target:self action:nil];//@selector(rankCrown)
-    self.navigationItem.titleView = self.topView;
     [self setupTopMenu];
 }
 
