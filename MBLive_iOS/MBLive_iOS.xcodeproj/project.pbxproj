@@ -35,6 +35,8 @@
 		51ED002B204FBD7E00B9C7AF /* MBNewVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED002A204FBD7E00B9C7AF /* MBNewVc.m */; };
 		51ED0030204FBE0100B9C7AF /* MBFollowVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED002F204FBE0100B9C7AF /* MBFollowVc.m */; };
 		51ED0036204FDC8600B9C7AF /* MBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0035204FDC8600B9C7AF /* MBUser.m */; };
+		51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0039204FDE0900B9C7AF /* MBAnchorViewCell.m */; };
+		51ED003C204FDE0900B9C7AF /* MBAnchorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ED003A204FDE0900B9C7AF /* MBAnchorViewCell.xib */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -132,6 +134,9 @@
 		51ED002F204FBE0100B9C7AF /* MBFollowVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBFollowVc.m; sourceTree = "<group>"; };
 		51ED0034204FDC8600B9C7AF /* MBUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBUser.h; sourceTree = "<group>"; };
 		51ED0035204FDC8600B9C7AF /* MBUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBUser.m; sourceTree = "<group>"; };
+		51ED0038204FDE0900B9C7AF /* MBAnchorViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAnchorViewCell.h; sourceTree = "<group>"; };
+		51ED0039204FDE0900B9C7AF /* MBAnchorViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAnchorViewCell.m; sourceTree = "<group>"; };
+		51ED003A204FDE0900B9C7AF /* MBAnchorViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBAnchorViewCell.xib; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -323,6 +328,7 @@
 		51ED0027204FBD4500B9C7AF /* New */ = {
 			isa = PBXGroup;
 			children = (
+				51ED0037204FDDCE00B9C7AF /* View */,
 				51ED0028204FBD5600B9C7AF /* Controller */,
 			);
 			path = New;
@@ -352,6 +358,16 @@
 				51ED002F204FBE0100B9C7AF /* MBFollowVc.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		51ED0037204FDDCE00B9C7AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51ED0038204FDE0900B9C7AF /* MBAnchorViewCell.h */,
+				51ED0039204FDE0900B9C7AF /* MBAnchorViewCell.m */,
+				51ED003A204FDE0900B9C7AF /* MBAnchorViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		51F57549204D2BB90030CFD1 /* Resource */ = {
@@ -688,6 +704,7 @@
 			files = (
 				51F8D8F22048E8F000B9A10C /* LaunchScreen.storyboard in Resources */,
 				51F8D8EF2048E8F000B9A10C /* Assets.xcassets in Resources */,
+				51ED003C204FDE0900B9C7AF /* MBAnchorViewCell.xib in Resources */,
 				51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */,
 				51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */,
 				51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */,
@@ -818,6 +835,7 @@
 				51F8D92220492BE100B9A10C /* MBHomeViewController.m in Sources */,
 				51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
+				51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,
 				51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */,
 				51ED0030204FBE0100B9C7AF /* MBFollowVc.m in Sources */,

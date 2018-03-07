@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MBAnchorViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_head" translatesAutoresizingMaskIntoConstraints="NO" id="DuL-dH-PFt">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag_new_33x17_" translatesAutoresizingMaskIntoConstraints="NO" id="9xr-fF-gea">
+                        <rect key="frame" x="157" y="5" width="33" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="EFc-2S-lIf"/>
+                            <constraint firstAttribute="height" constant="17" id="O5r-Wc-Q2e"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voT-nV-idU">
+                        <rect key="frame" x="10" y="10" width="100" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="zoa-8T-YeI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="重庆巴南" image="location_white_8x9_"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-bp-ixG">
+                        <rect key="frame" x="0.0" y="175" width="200" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="80B-0k-cfG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gM6-bp-ixG" secondAttribute="bottom" constant="5" id="43j-La-DO9"/>
+                <constraint firstItem="9xr-fF-gea" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="4aF-ST-zwf"/>
+                <constraint firstAttribute="trailing" secondItem="gM6-bp-ixG" secondAttribute="trailing" id="8xm-XU-gt7"/>
+                <constraint firstItem="DuL-dH-PFt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RJX-cf-rcf"/>
+                <constraint firstItem="gM6-bp-ixG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tvv-uE-BYS"/>
+                <constraint firstAttribute="trailing" secondItem="DuL-dH-PFt" secondAttribute="trailing" id="X2R-GZ-Ttl"/>
+                <constraint firstItem="DuL-dH-PFt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a64-OI-kIT"/>
+                <constraint firstAttribute="trailing" secondItem="9xr-fF-gea" secondAttribute="trailing" constant="10" id="jYD-rV-2uf"/>
+                <constraint firstItem="voT-nV-idU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="k32-Ew-RPV"/>
+                <constraint firstAttribute="bottom" secondItem="DuL-dH-PFt" secondAttribute="bottom" id="m2l-l5-Sh3"/>
+                <constraint firstItem="voT-nV-idU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="yMp-xC-lTH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="CoverView" destination="DuL-dH-PFt" id="sXb-yV-smp"/>
+                <outlet property="Star" destination="9xr-fF-gea" id="WJR-Dx-fDk"/>
+                <outlet property="locationBtn" destination="voT-nV-idU" id="k8q-Ri-dWL"/>
+                <outlet property="nikeNameLab" destination="gM6-bp-ixG" id="G4M-mb-K3s"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flag_new_33x17_" width="33" height="17"/>
+        <image name="location_white_8x9_" width="8" height="9"/>
+        <image name="placeholder_head" width="100" height="100"/>
+    </resources>
+</document>
