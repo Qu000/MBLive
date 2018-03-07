@@ -24,6 +24,7 @@
 		51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A3B204E8FE000631AAF /* MBHotVc.m */; };
 		51B93A43204E90FB00631AAF /* MBHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A41204E90FB00631AAF /* MBHotCell.m */; };
 		51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B93A42204E90FB00631AAF /* MBHotCell.xib */; };
+		51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */; };
 		51F57548204CF27F0030CFD1 /* UIViewController+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */; };
 		51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */; };
 		51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51F5754B204D2BE50030CFD1 /* login_video.mp4 */; };
@@ -99,6 +100,8 @@
 		51B93A40204E90FB00631AAF /* MBHotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHotCell.h; sourceTree = "<group>"; };
 		51B93A41204E90FB00631AAF /* MBHotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHotCell.m; sourceTree = "<group>"; };
 		51B93A42204E90FB00631AAF /* MBHotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBHotCell.xib; sourceTree = "<group>"; };
+		51ED000D204F7C6100B9C7AF /* UIImage+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MBExtension.h"; sourceTree = "<group>"; };
+		51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MBExtension.m"; sourceTree = "<group>"; };
 		51F57541204CE8730030CFD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		51F57546204CF27F0030CFD1 /* UIViewController+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBHUD.h"; sourceTree = "<group>"; };
 		51F57547204CF27F0030CFD1 /* UIViewController+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBHUD.m"; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */,
 				51B939F9204E76AD00631AAF /* UIView+MBExtension.h */,
 				51B939FA204E76AD00631AAF /* UIView+MBExtension.m */,
+				51ED000D204F7C6100B9C7AF /* UIImage+MBExtension.h */,
+				51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */,
 				51B93A37204E8E0300631AAF /* MBConstant.h */,
 				51B93A38204E8E0300631AAF /* MBConstant.m */,
 				51B93A30204E8B3A00631AAF /* IJKMediaFramework.framework */,
@@ -720,6 +725,7 @@
 				51B93A39204E8E0300631AAF /* MBConstant.m in Sources */,
 				51B93A35204E8CB000631AAF /* MBSelectedView.m in Sources */,
 				51F8D8EA2048E8F000B9A10C /* ViewController.m in Sources */,
+				51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */,
 				51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */,
 				51B939F0204E738C00631AAF /* Reachability.m in Sources */,
 				51B93A43204E90FB00631AAF /* MBHotCell.m in Sources */,

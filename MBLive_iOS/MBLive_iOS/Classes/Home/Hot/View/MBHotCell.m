@@ -7,9 +7,9 @@
 //
 
 #import "MBHotCell.h"
-
+#import "MBHomeLiveModel.h"
 @interface MBHotCell()
-@property (weak, nonatomic) IBOutlet UIView *headIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *headIcon;
 @property (weak, nonatomic) IBOutlet UIView *locationBtn;
 @property (weak, nonatomic) IBOutlet UIView *nameLab;
 @property (weak, nonatomic) IBOutlet UIView *startIcon;
@@ -22,7 +22,10 @@
 
 -(void)setModel:(MBHomeLiveModel *)model{
     _model = model;
-
+    [self.headIcon sd_setImageWithURL:[NSURL URLWithString:model.smallpic] placeholderImage:[UIImage imageNamed:@"placeholder_head"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        image = [UIImage circleImage:image borderColor:[UIColor redColor] borderWidth:1];
+        self.headIcon.image = image;
+    }];
 }
 
 
