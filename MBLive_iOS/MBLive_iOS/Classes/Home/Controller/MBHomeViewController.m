@@ -8,14 +8,20 @@
 
 #import "MBHomeViewController.h"
 #import "MBSelectedView.h"
+#import "MBHotVc.h"
 
 @interface MBHomeViewController ()
 /** 顶部选择视图 */
 @property(nonatomic, assign) MBSelectedView *selectedView;
+/** UIScrollView */
+@property(nonatomic, weak) UIScrollView *scrollView;
+/** 热播 */
+@property(nonatomic, weak) MBHotVc *hotVc;
 
 @end
 
 @implementation MBHomeViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
