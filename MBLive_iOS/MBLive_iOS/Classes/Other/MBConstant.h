@@ -11,8 +11,8 @@
 
 #pragma mark - Frame相关
 // 屏幕宽/高
-#define ALinScreenWidth  [UIScreen mainScreen].bounds.size.width
-#define ALinScreenHeight [UIScreen mainScreen].bounds.size.height
+#define MBScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define MBScreenHeight [UIScreen mainScreen].bounds.size.height
 
 // 首页的选择器的宽度
 #define Home_Seleted_Item_W 60

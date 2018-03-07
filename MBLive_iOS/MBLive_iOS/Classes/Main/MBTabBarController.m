@@ -42,7 +42,8 @@
     MBNavigationController * nav = [[MBNavigationController alloc]initWithRootViewController:childController];
     
     //设置tabBarItem的title
-    childController.title = title;
+    childController.tabBarItem.title = title;
+
     //设置文字样式
     NSMutableDictionary *textAtts = [NSMutableDictionary dictionary];
     textAtts[NSForegroundColorAttributeName] = [UIColor grayColor];
