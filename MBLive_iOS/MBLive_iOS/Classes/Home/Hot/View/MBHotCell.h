@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class MBHomeLiveModel;
 @interface MBHotCell : UITableViewCell
 
+@property (nonatomic, strong) MBHomeLiveModel * model;
 @end

@@ -106,6 +106,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bigPicView" destination="cp1-Ii-AaP" id="hXM-0d-F64"/>
+                <outlet property="headIcon" destination="DUx-O5-zfr" id="YK3-uh-E8l"/>
+                <outlet property="locationBtn" destination="DUx-O5-zfr" id="9Fy-hs-wIZ"/>
+                <outlet property="nameLab" destination="DUx-O5-zfr" id="gWt-9z-6zd"/>
+                <outlet property="numberLab" destination="ls1-2H-2Av" id="g2x-IA-t2a"/>
+                <outlet property="startIcon" destination="DUx-O5-zfr" id="nB9-LQ-wfz"/>
+            </connections>
             <point key="canvasLocation" x="16" y="-88"/>
         </tableViewCell>
     </objects>
