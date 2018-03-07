@@ -76,7 +76,7 @@
 {
     if (!_coverView) {
         UIImageView *cover = [[UIImageView alloc] initWithFrame:self.view.bounds];
-        cover.image = [UIImage imageNamed:@"login"];
+        cover.image = [UIImage imageNamed:@"LaunchImage"];//login
         [self.player.view addSubview:cover];
         _coverView = cover;
     }
@@ -117,7 +117,7 @@
     [self.quickBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@40);
         make.right.equalTo(@-40);
-        make.bottom.equalTo(@-60);
+        make.bottom.equalTo(@-150);
         make.height.equalTo(@40);
     }];
     
