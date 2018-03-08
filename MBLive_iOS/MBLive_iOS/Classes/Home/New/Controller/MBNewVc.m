@@ -88,7 +88,29 @@ static NSString * const reuseIdentifier = @"MBAnchorViewCell";
 }
 
 - (void)getAnchorsList{
-    
+    [[MBNetworkTool shareTool] GET:[NSString stringWithFormat:@"http://live.9158.com/Room/GetNewRoomOnline?page=%ld",self.currentPage] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView.mj_footer endRefreshing];
+        NSString *state = responseObject[@"msg"];
+        if ([state isEqualToString:@"fail"]) {
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+            [self showHint:@"暂时没有更多最新数据"];
+            self.currentPage--;
+        }else {
+            [responseObject[@"data"][@"list"] writeToFile:@"/Users/apple/Desktop/user.plist" atomically:YES];
+            NSArray * result = [MBUser mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+            if (result.count) {
+                [self.anchors addObjectsFromArray:result];
+                [self.collectionView reloadData];
+            }
+            
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView.mj_footer endRefreshing];
+        self.currentPage--;
+        [self showHint:@"网络异常"];
+    }];
 }
 
 

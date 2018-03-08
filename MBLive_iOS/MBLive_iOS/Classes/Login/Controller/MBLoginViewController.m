@@ -60,10 +60,10 @@
     if (!_quickBtn) {
         UIButton * btn = [[UIButton alloc]init];
         btn.backgroundColor = [UIColor clearColor];
-        btn.layer.borderWidth = 1;
-        btn.layer.borderColor = [UIColor redColor].CGColor;
+        btn.layer.borderWidth = 2;
+        btn.layer.borderColor = [UIColor purpleColor].CGColor;
         [btn setTitle:@"快速登录" forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor yellowColor]  forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor purpleColor]  forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(loginSuccess) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
         btn.hidden = YES;
