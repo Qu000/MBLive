@@ -16,6 +16,8 @@
 		510848942050D79E00A30BBF /* MBLiveVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848932050D79E00A30BBF /* MBLiveVc.m */; };
 		510848972051089900A30BBF /* MBLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848962051089900A30BBF /* MBLiveCell.m */; };
 		5108489A205109D800A30BBF /* MBBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51084899205109D800A30BBF /* MBBottomToolView.m */; };
+		51093C6D2051262900C4FFEA /* MBUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51093C6C2051262900C4FFEA /* MBUserView.m */; };
+		51093C712051267800C4FFEA /* MBUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51093C702051267800C4FFEA /* MBUserView.xib */; };
 		51B939F0204E738C00631AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939EE204E738C00631AAF /* Reachability.m */; };
 		51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F4204E74B300631AAF /* MBNetworkTool.m */; };
 		51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F7204E762D00631AAF /* MBTopWindow.m */; };
@@ -102,6 +104,9 @@
 		510848962051089900A30BBF /* MBLiveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveCell.m; sourceTree = "<group>"; };
 		51084898205109D800A30BBF /* MBBottomToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBBottomToolView.h; sourceTree = "<group>"; };
 		51084899205109D800A30BBF /* MBBottomToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBBottomToolView.m; sourceTree = "<group>"; };
+		51093C6B2051262900C4FFEA /* MBUserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBUserView.h; sourceTree = "<group>"; };
+		51093C6C2051262900C4FFEA /* MBUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBUserView.m; sourceTree = "<group>"; };
+		51093C702051267800C4FFEA /* MBUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBUserView.xib; sourceTree = "<group>"; };
 		51B939EE204E738C00631AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		51B939EF204E738C00631AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		51B939F3204E74B300631AAF /* MBNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBNetworkTool.h; sourceTree = "<group>"; };
@@ -290,6 +295,9 @@
 				510848962051089900A30BBF /* MBLiveCell.m */,
 				51084898205109D800A30BBF /* MBBottomToolView.h */,
 				51084899205109D800A30BBF /* MBBottomToolView.m */,
+				51093C6B2051262900C4FFEA /* MBUserView.h */,
+				51093C6C2051262900C4FFEA /* MBUserView.m */,
+				51093C702051267800C4FFEA /* MBUserView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -754,6 +762,7 @@
 				51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */,
 				5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */,
 				51F8D8ED2048E8F000B9A10C /* Main.storyboard in Resources */,
+				51093C712051267800C4FFEA /* MBUserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +884,7 @@
 			files = (
 				51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */,
 				51ED0023204F8B8000B9C7AF /* MBBannerView.m in Sources */,
+				51093C6D2051262900C4FFEA /* MBUserView.m in Sources */,
 				51ED001F204F8AFA00B9C7AF /* MBHotADCell.m in Sources */,
 				51F8D92220492BE100B9A10C /* MBHomeViewController.m in Sources */,
 				51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */,
