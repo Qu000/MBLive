@@ -13,6 +13,7 @@
 		5105C8C5204E3E66000848CD /* UIDevice+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5105C8C4204E3E66000848CD /* UIDevice+MBExtension.m */; };
 		5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */; };
 		5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5105C8C9204E4152000848CD /* MBLiveViewController.storyboard */; };
+		510848942050D79E00A30BBF /* MBLiveVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848932050D79E00A30BBF /* MBLiveVc.m */; };
 		51B939F0204E738C00631AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939EE204E738C00631AAF /* Reachability.m */; };
 		51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F4204E74B300631AAF /* MBNetworkTool.m */; };
 		51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F7204E762D00631AAF /* MBTopWindow.m */; };
@@ -93,6 +94,8 @@
 		5105C8C6204E3FB5000848CD /* NSObject+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MBHUD.h"; sourceTree = "<group>"; };
 		5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MBHUD.m"; sourceTree = "<group>"; };
 		5105C8C9204E4152000848CD /* MBLiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MBLiveViewController.storyboard; sourceTree = "<group>"; };
+		510848922050D79E00A30BBF /* MBLiveVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveVc.h; sourceTree = "<group>"; };
+		510848932050D79E00A30BBF /* MBLiveVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveVc.m; sourceTree = "<group>"; };
 		51B939EE204E738C00631AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		51B939EF204E738C00631AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		51B939F3204E74B300631AAF /* MBNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBNetworkTool.h; sourceTree = "<group>"; };
@@ -252,6 +255,31 @@
 			children = (
 				5105C8BA204E34E4000848CD /* MBThirdLogin.h */,
 				5105C8BB204E34E4000848CD /* MBThirdLogin.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5108488F2050D75800A30BBF /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				510848912050D76C00A30BBF /* View */,
+				510848902050D76400A30BBF /* Controller */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		510848902050D76400A30BBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				510848922050D79E00A30BBF /* MBLiveVc.h */,
+				510848932050D79E00A30BBF /* MBLiveVc.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		510848912050D76C00A30BBF /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,12 +475,13 @@
 		51F8D90A204929DA00B9A10C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5108488F2050D75800A30BBF /* Live */,
 				51B93A32204E8C8D00631AAF /* View */,
 				51B93A2C204E84C900631AAF /* Model */,
 				51F8D91B20492B4100B9A10C /* Controller */,
 				51B93A3D204E908800631AAF /* Hot */,
-				51ED002C204FBDAA00B9C7AF /* Follow */,
 				51ED0027204FBD4500B9C7AF /* New */,
+				51ED002C204FBDAA00B9C7AF /* Follow */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -841,6 +870,7 @@
 				51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */,
 				51ED003F204FE24600B9C7AF /* MBNewFlowLayout.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
+				510848942050D79E00A30BBF /* MBLiveVc.m in Sources */,
 				51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,
 				51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */,
