@@ -7,60 +7,79 @@
 //
 
 #import "MBLiveVc.h"
+#import "MBLiveCell.h"
+#import "MBNewFlowLayout.h"
+#import "MBRefresh.h"
 
+#import "MBUser.h"
 @interface MBLiveVc ()
 
 @end
 
 @implementation MBLiveVc
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"MBLiveCell";
+
+- (instancetype)init
+{
+    return [super initWithCollectionViewLayout:[[MBNewFlowLayout alloc] init]];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupUI];}
+
+- (void)setupUI{
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.collectionView registerClass:[MBLiveCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    MBRefresh *header = [MBRefresh headerWithRefreshingBlock:^{
+        [self.collectionView.mj_header endRefreshing];
+        self.currentIndex++;
+        if (self.currentIndex == self.lives.count) {
+            self.currentIndex = 0;
+        }
+        [self.collectionView reloadData];
+    }];
+    header.stateLabel.hidden = NO;
+    [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStatePulling];
+    [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStateIdle];
+    self.collectionView.mj_header = header;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotifyClickUser object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#warning waited......
+- (void)clickUser:(NSNotification *)notification{
+//    if (notification.userInfo[@"user"] != nil) {
+//        MBUser *user = notification.userInfo[@"user"];
+//
+//    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+    MBLiveCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.parentVc = self;
+    cell.live = self.lives[self.currentIndex];
+    NSUInteger relateIndex = self.currentIndex;
+    if (self.currentIndex + 1 == self.lives.count) {
+        relateIndex = 0;
+    }else {
+        relateIndex += 1;
+    }
+    cell.relateLive = self.lives[relateIndex];
+    [cell setClickRelatedLive:^{
+        self.currentIndex += 1;
+        [self.collectionView reloadData];
+    }];
     return cell;
 }
 

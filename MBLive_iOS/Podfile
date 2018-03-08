@@ -18,4 +18,5 @@ pod 'SDWebImage', '~> 3.8.1'
 pod 'MJRefresh', '~> 3.1.1'
 pod 'MJExtension', '~> 3.0.10'
 pod 'YYKit', '~> 1.0.9'
+pod 'BarrageRenderer', '~> 1.8.0'
 end

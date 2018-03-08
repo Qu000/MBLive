@@ -14,6 +14,8 @@
 		5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */; };
 		5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5105C8C9204E4152000848CD /* MBLiveViewController.storyboard */; };
 		510848942050D79E00A30BBF /* MBLiveVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848932050D79E00A30BBF /* MBLiveVc.m */; };
+		510848972051089900A30BBF /* MBLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848962051089900A30BBF /* MBLiveCell.m */; };
+		5108489A205109D800A30BBF /* MBBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51084899205109D800A30BBF /* MBBottomToolView.m */; };
 		51B939F0204E738C00631AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939EE204E738C00631AAF /* Reachability.m */; };
 		51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F4204E74B300631AAF /* MBNetworkTool.m */; };
 		51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F7204E762D00631AAF /* MBTopWindow.m */; };
@@ -96,6 +98,10 @@
 		5105C8C9204E4152000848CD /* MBLiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MBLiveViewController.storyboard; sourceTree = "<group>"; };
 		510848922050D79E00A30BBF /* MBLiveVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveVc.h; sourceTree = "<group>"; };
 		510848932050D79E00A30BBF /* MBLiveVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveVc.m; sourceTree = "<group>"; };
+		510848952051089900A30BBF /* MBLiveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveCell.h; sourceTree = "<group>"; };
+		510848962051089900A30BBF /* MBLiveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveCell.m; sourceTree = "<group>"; };
+		51084898205109D800A30BBF /* MBBottomToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBBottomToolView.h; sourceTree = "<group>"; };
+		51084899205109D800A30BBF /* MBBottomToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBBottomToolView.m; sourceTree = "<group>"; };
 		51B939EE204E738C00631AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		51B939EF204E738C00631AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		51B939F3204E74B300631AAF /* MBNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBNetworkTool.h; sourceTree = "<group>"; };
@@ -280,6 +286,10 @@
 		510848912050D76C00A30BBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				510848952051089900A30BBF /* MBLiveCell.h */,
+				510848962051089900A30BBF /* MBLiveCell.m */,
+				51084898205109D800A30BBF /* MBBottomToolView.h */,
+				51084899205109D800A30BBF /* MBBottomToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -896,6 +906,8 @@
 				51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */,
 				51ED002B204FBD7E00B9C7AF /* MBNewVc.m in Sources */,
 				51ED001C204F87A700B9C7AF /* MBHotADModel.m in Sources */,
+				510848972051089900A30BBF /* MBLiveCell.m in Sources */,
+				5108489A205109D800A30BBF /* MBBottomToolView.m in Sources */,
 				51ED0018204F865B00B9C7AF /* UIImageView+MBExtension.m in Sources */,
 				51F8D92E20492C9B00B9A10C /* MBProfileViewController.m in Sources */,
 				51B93A2F204E852600631AAF /* MBHomeLiveModel.m in Sources */,

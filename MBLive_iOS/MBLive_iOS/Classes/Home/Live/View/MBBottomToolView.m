@@ -1,0 +1,47 @@
+//
+//  MBBottomToolView.m
+//  MBLive_iOS
+//
+//  Created by qujiahong on 2018/3/8.
+//  Copyright © 2018年 瞿嘉洪. All rights reserved.
+//
+
+#import "MBBottomToolView.h"
+
+@implementation MBBottomToolView
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (NSArray *)tools
+{
+    return @[@"talk_public_40x40", @"talk_private_40x40", @"talk_sendgift_40x40", @"talk_rank_40x40", @"talk_share_40x40", @"talk_close_40x40"];
+}
+
+- (void)setupUI{
+    CGFloat wh = 40;
+    CGFloat margin = (MBScreenWidth - wh * self.tools.count) / (self.tools.count + 1.0);
+    CGFloat x = 0;
+    CGFloat y = 0;
+    for (int i = 0; i<self.tools.count; i++) {
+        x = margin + (margin + wh) * i;
+        UIImageView *toolView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, wh, wh)];
+        toolView.userInteractionEnabled = YES;
+        toolView.tag = i;
+        toolView.image = [UIImage imageNamed:self.tools[i]];
+        [toolView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)]];
+        [self addSubview:toolView];
+    }
+}
+
+- (void)click:(UITapGestureRecognizer *)tapGesture{
+    if (self.clickToolBlock) {
+        self.clickToolBlock(tapGesture.view.tag);
+    }
+}
+@end
