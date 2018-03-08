@@ -10,10 +10,12 @@
 #import "MBLiveCell.h"
 #import "MBNewFlowLayout.h"
 #import "MBRefresh.h"
+#import "MBUserView.h"
 
 #import "MBUser.h"
 @interface MBLiveVc ()
-
+/** 用户信息View */
+@property(nonatomic, weak) MBUserView *userView;
 @end
 
 @implementation MBLiveVc
@@ -25,6 +27,30 @@ static NSString * const reuseIdentifier = @"MBLiveCell";
     return [super initWithCollectionViewLayout:[[MBNewFlowLayout alloc] init]];
 }
 
+-(MBUserView *)userView{
+    if (!_userView) {
+        MBUserView *userView = [MBUserView userView];
+        [self.collectionView addSubview:userView];
+        _userView = userView;
+        
+        [userView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(@0);
+            make.width.equalTo(@(MBScreenWidth));
+            make.height.equalTo(@(MBScreenHeight));
+        }];
+        
+        userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        [userView setCloseBlock:^{
+            [UIView animateWithDuration:0.5 animations:^{
+                self.userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            } completion:^(BOOL finished) {
+                [self.userView removeFromSuperview];
+                self.userView = nil;
+            }];
+        }];
+    }
+    return _userView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -49,12 +75,14 @@ static NSString * const reuseIdentifier = @"MBLiveCell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotifyClickUser object:nil];
 }
 
-#warning waited......
 - (void)clickUser:(NSNotification *)notification{
-//    if (notification.userInfo[@"user"] != nil) {
-//        MBUser *user = notification.userInfo[@"user"];
-//
-//    }
+    if (notification.userInfo[@"user"] != nil) {
+        MBUser *user = notification.userInfo[@"user"];
+        self.userView.user = user;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.userView.transform = CGAffineTransformIdentity;
+        }];
+    }
 }
 
 

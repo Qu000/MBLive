@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MBUser;
 @interface MBUserView : UIView
-
++ (instancetype)userView;
+/** 点击关闭 */
+@property (nonatomic, copy) void (^closeBlock)();
+/** 用户信息 */
+@property (nonatomic, strong) MBUser *user;
 @end

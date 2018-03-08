@@ -30,7 +30,7 @@
 @end
 
 @implementation MBLiveCell
-
+#warning waite........
 -(UIImageView *)placeHolderView{
     if (!_placeHolderView) {
         UIImageView *imageV = [[UIImageView alloc]init];
