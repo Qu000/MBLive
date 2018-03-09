@@ -9,6 +9,7 @@
 #import "MBLiveCell.h"
 #import "MBBottomToolView.h"
 #import <BarrageRenderer.h>
+#import "MBCatEarView.h"
 
 #import "MBHomeLiveModel.h"
 #import "MBUser.h"
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) IJKFFMoviePlayerController * moviePlayer;
 /** 直播底部工具条 */
 @property(nonatomic, weak) MBBottomToolView *toolView;
+/** 同类型直播视图 */
+@property(nonatomic, weak) MBCatEarView *catEarView;
 
 /** 同一个工会的主播/相关主播 */
 @property(nonatomic, weak) UIImageView *otherView;
@@ -92,12 +95,12 @@ bool _isSelected = NO;
     if (!_otherView) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"private_icon_70x70"]];
         imageView.userInteractionEnabled = YES;
-//        [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOther)]];
-//        [self.moviePlayer.view addSubview:imageView];
-//        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.right.equalTo(self.catEarView);
-//            make.bottom.equalTo(self.catEarView.mas_top).offset(-40);
-//        }];
+        [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOther)]];
+        [self.moviePlayer.view addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.catEarView);
+            make.bottom.equalTo(self.catEarView.mas_top).offset(-40);
+        }];
         _otherView = imageView;
     }
     return _otherView;

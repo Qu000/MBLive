@@ -31,6 +31,8 @@
 		51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B93A42204E90FB00631AAF /* MBHotCell.xib */; };
 		51C93A8620521C430009A52C /* MBCatEarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C93A8520521C430009A52C /* MBCatEarView.m */; };
 		51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C93A8720521C5A0009A52C /* MBCatEarView.xib */; };
+		51C93A8B205225B30009A52C /* MBLiveAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C93A8A205225B30009A52C /* MBLiveAnchorView.m */; };
+		51C93A8D205225C00009A52C /* MBLiveAnchorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C93A8C205225C00009A52C /* MBLiveAnchorView.xib */; };
 		51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */; };
 		51ED0012204F832600B9C7AF /* MBRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0011204F832600B9C7AF /* MBRefresh.m */; };
 		51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0014204F85D500B9C7AF /* UIViewController+MBExtension.m */; };
@@ -132,6 +134,9 @@
 		51C93A8420521C430009A52C /* MBCatEarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBCatEarView.h; sourceTree = "<group>"; };
 		51C93A8520521C430009A52C /* MBCatEarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBCatEarView.m; sourceTree = "<group>"; };
 		51C93A8720521C5A0009A52C /* MBCatEarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBCatEarView.xib; sourceTree = "<group>"; };
+		51C93A89205225B30009A52C /* MBLiveAnchorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveAnchorView.h; sourceTree = "<group>"; };
+		51C93A8A205225B30009A52C /* MBLiveAnchorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveAnchorView.m; sourceTree = "<group>"; };
+		51C93A8C205225C00009A52C /* MBLiveAnchorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBLiveAnchorView.xib; sourceTree = "<group>"; };
 		51ED000D204F7C6100B9C7AF /* UIImage+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MBExtension.h"; sourceTree = "<group>"; };
 		51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MBExtension.m"; sourceTree = "<group>"; };
 		51ED0010204F832600B9C7AF /* MBRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBRefresh.h; sourceTree = "<group>"; };
@@ -306,6 +311,9 @@
 				51C93A8420521C430009A52C /* MBCatEarView.h */,
 				51C93A8520521C430009A52C /* MBCatEarView.m */,
 				51C93A8720521C5A0009A52C /* MBCatEarView.xib */,
+				51C93A89205225B30009A52C /* MBLiveAnchorView.h */,
+				51C93A8A205225B30009A52C /* MBLiveAnchorView.m */,
+				51C93A8C205225C00009A52C /* MBLiveAnchorView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -765,6 +773,7 @@
 				51F8D8F22048E8F000B9A10C /* LaunchScreen.storyboard in Resources */,
 				51F8D8EF2048E8F000B9A10C /* Assets.xcassets in Resources */,
 				51ED003C204FDE0900B9C7AF /* MBAnchorViewCell.xib in Resources */,
+				51C93A8D205225C00009A52C /* MBLiveAnchorView.xib in Resources */,
 				51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */,
 				51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */,
 				51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */,
@@ -906,6 +915,7 @@
 				51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */,
 				51ED0030204FBE0100B9C7AF /* MBFollowVc.m in Sources */,
 				51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */,
+				51C93A8B205225B30009A52C /* MBLiveAnchorView.m in Sources */,
 				51F8D931204A698500B9A10C /* MBTabBarController.m in Sources */,
 				51ED0026204F959700B9C7AF /* MBWebVc.m in Sources */,
 				51F8D915204929DA00B9A10C /* main.m in Sources */,
