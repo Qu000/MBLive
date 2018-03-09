@@ -18,6 +18,8 @@
     BarrageRenderer *_renderer;
     NSTimer * _timer;
 }
+/** 直播的播放器*/
+@property (nonatomic, strong) IJKFFMoviePlayerController * moviePlayer;
 /** 直播底部工具条 */
 @property(nonatomic, weak) MBBottomToolView *toolView;
 
@@ -30,7 +32,8 @@
 @end
 
 @implementation MBLiveCell
-#warning waite........
+
+#pragma  mark --- 懒加载
 -(UIImageView *)placeHolderView{
     if (!_placeHolderView) {
         UIImageView *imageV = [[UIImageView alloc]init];
@@ -75,9 +78,32 @@ bool _isSelected = NO;
                     break;
             }
         }];
+        [self.contentView insertSubview:toolView aboveSubview:self.placeHolderView];
+        [toolView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(@0);
+            make.bottom.equalTo(@-10);
+            make.height.equalTo(@40);
+        }];
+        _toolView = toolView;
     }
     return _toolView;
 }
+-(UIImageView *)otherView{
+    if (!_otherView) {
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"private_icon_70x70"]];
+        imageView.userInteractionEnabled = YES;
+//        [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOther)]];
+//        [self.moviePlayer.view addSubview:imageView];
+//        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.right.equalTo(self.catEarView);
+//            make.bottom.equalTo(self.catEarView.mas_top).offset(-40);
+//        }];
+        _otherView = imageView;
+    }
+    return _otherView;
+}
+
+
 
 
 

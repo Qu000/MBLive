@@ -29,6 +29,8 @@
 		51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A3B204E8FE000631AAF /* MBHotVc.m */; };
 		51B93A43204E90FB00631AAF /* MBHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B93A41204E90FB00631AAF /* MBHotCell.m */; };
 		51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B93A42204E90FB00631AAF /* MBHotCell.xib */; };
+		51C93A8620521C430009A52C /* MBCatEarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C93A8520521C430009A52C /* MBCatEarView.m */; };
+		51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C93A8720521C5A0009A52C /* MBCatEarView.xib */; };
 		51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */; };
 		51ED0012204F832600B9C7AF /* MBRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0011204F832600B9C7AF /* MBRefresh.m */; };
 		51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0014204F85D500B9C7AF /* UIViewController+MBExtension.m */; };
@@ -127,6 +129,9 @@
 		51B93A40204E90FB00631AAF /* MBHotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBHotCell.h; sourceTree = "<group>"; };
 		51B93A41204E90FB00631AAF /* MBHotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBHotCell.m; sourceTree = "<group>"; };
 		51B93A42204E90FB00631AAF /* MBHotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBHotCell.xib; sourceTree = "<group>"; };
+		51C93A8420521C430009A52C /* MBCatEarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBCatEarView.h; sourceTree = "<group>"; };
+		51C93A8520521C430009A52C /* MBCatEarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBCatEarView.m; sourceTree = "<group>"; };
+		51C93A8720521C5A0009A52C /* MBCatEarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBCatEarView.xib; sourceTree = "<group>"; };
 		51ED000D204F7C6100B9C7AF /* UIImage+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MBExtension.h"; sourceTree = "<group>"; };
 		51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MBExtension.m"; sourceTree = "<group>"; };
 		51ED0010204F832600B9C7AF /* MBRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBRefresh.h; sourceTree = "<group>"; };
@@ -298,6 +303,9 @@
 				51093C6B2051262900C4FFEA /* MBUserView.h */,
 				51093C6C2051262900C4FFEA /* MBUserView.m */,
 				51093C702051267800C4FFEA /* MBUserView.xib */,
+				51C93A8420521C430009A52C /* MBCatEarView.h */,
+				51C93A8520521C430009A52C /* MBCatEarView.m */,
+				51C93A8720521C5A0009A52C /* MBCatEarView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -759,6 +767,7 @@
 				51ED003C204FDE0900B9C7AF /* MBAnchorViewCell.xib in Resources */,
 				51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */,
 				51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */,
+				51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */,
 				51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */,
 				5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */,
 				51F8D8ED2048E8F000B9A10C /* Main.storyboard in Resources */,
@@ -891,6 +900,7 @@
 				51ED003F204FE24600B9C7AF /* MBNewFlowLayout.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
 				510848942050D79E00A30BBF /* MBLiveVc.m in Sources */,
+				51C93A8620521C430009A52C /* MBCatEarView.m in Sources */,
 				51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,
 				51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */,
