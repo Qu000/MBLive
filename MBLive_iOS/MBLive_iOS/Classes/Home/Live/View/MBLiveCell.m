@@ -11,6 +11,8 @@
 #import <BarrageRenderer.h>
 #import "MBCatEarView.h"
 #import "MBLiveAnchorView.h"
+#import "MBLiveEndView.h"
+#import "MBSafeObject.h"
 
 #import "MBHomeLiveModel.h"
 #import "MBUser.h"
@@ -28,6 +30,8 @@
 @property(nonatomic, weak) MBCatEarView *catEarView;
 /** 顶部主播视图 */
 @property(nonatomic, weak) MBLiveAnchorView *anchorView;
+/** 直播结束的界面 */
+@property(nonatomic, weak) MBLiveEndView *endView;
 
 /** 同一个工会的主播/相关主播 */
 @property(nonatomic, weak) UIImageView *otherView;
@@ -192,6 +196,41 @@ bool _isSelected = NO;
     }
     return _emitterLayer;
 }
+
+-(MBLiveEndView *)endView{
+    if (!_endView) {
+        MBLiveEndView *endView = [MBLiveEndView liveEndView];
+        [self.contentView addSubview:endView];
+        [endView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(@0);
+        }];
+        [endView setQuitBlock:^{
+//            [self quit];
+        }];
+        [endView setLookOtherBlock:^{
+//            [self clickCatEar];
+        }];
+        _endView = endView;
+    }
+    return _endView;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self.toolView.hidden = NO;
+        
+        _renderer = [[BarrageRenderer alloc] init];
+        _renderer.canvasMargin = UIEdgeInsetsMake(MBScreenHeight * 0.3, 10, 10, 10);
+        [self.contentView addSubview:_renderer.view];
+        
+        MBSafeObject * safeObj = [[MBSafeObject alloc]initWithObject:self withSelector:@selector(autoSendBarrage)];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:safeObj selector:@selector(excute) userInfo:nil repeats:YES];
+    }
+    return self;
+}
+
+
 
 
 

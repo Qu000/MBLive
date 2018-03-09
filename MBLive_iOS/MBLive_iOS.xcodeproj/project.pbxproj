@@ -33,6 +33,9 @@
 		51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C93A8720521C5A0009A52C /* MBCatEarView.xib */; };
 		51C93A8B205225B30009A52C /* MBLiveAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C93A8A205225B30009A52C /* MBLiveAnchorView.m */; };
 		51C93A8D205225C00009A52C /* MBLiveAnchorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C93A8C205225C00009A52C /* MBLiveAnchorView.xib */; };
+		51C93A90205259550009A52C /* MBLiveEndView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C93A8F205259550009A52C /* MBLiveEndView.m */; };
+		51C93A9520525B1B0009A52C /* MBSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C93A9420525B1B0009A52C /* MBSafeObject.m */; };
+		51C93A9720525B360009A52C /* MBLiveEndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C93A9620525B360009A52C /* MBLiveEndView.xib */; };
 		51ED000F204F7C6100B9C7AF /* UIImage+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */; };
 		51ED0012204F832600B9C7AF /* MBRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0011204F832600B9C7AF /* MBRefresh.m */; };
 		51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED0014204F85D500B9C7AF /* UIViewController+MBExtension.m */; };
@@ -137,6 +140,11 @@
 		51C93A89205225B30009A52C /* MBLiveAnchorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveAnchorView.h; sourceTree = "<group>"; };
 		51C93A8A205225B30009A52C /* MBLiveAnchorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveAnchorView.m; sourceTree = "<group>"; };
 		51C93A8C205225C00009A52C /* MBLiveAnchorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBLiveAnchorView.xib; sourceTree = "<group>"; };
+		51C93A8E205259550009A52C /* MBLiveEndView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveEndView.h; sourceTree = "<group>"; };
+		51C93A8F205259550009A52C /* MBLiveEndView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveEndView.m; sourceTree = "<group>"; };
+		51C93A9320525B1B0009A52C /* MBSafeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBSafeObject.h; sourceTree = "<group>"; };
+		51C93A9420525B1B0009A52C /* MBSafeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSafeObject.m; sourceTree = "<group>"; };
+		51C93A9620525B360009A52C /* MBLiveEndView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBLiveEndView.xib; sourceTree = "<group>"; };
 		51ED000D204F7C6100B9C7AF /* UIImage+MBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MBExtension.h"; sourceTree = "<group>"; };
 		51ED000E204F7C6100B9C7AF /* UIImage+MBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MBExtension.m"; sourceTree = "<group>"; };
 		51ED0010204F832600B9C7AF /* MBRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBRefresh.h; sourceTree = "<group>"; };
@@ -314,6 +322,11 @@
 				51C93A89205225B30009A52C /* MBLiveAnchorView.h */,
 				51C93A8A205225B30009A52C /* MBLiveAnchorView.m */,
 				51C93A8C205225C00009A52C /* MBLiveAnchorView.xib */,
+				51C93A8E205259550009A52C /* MBLiveEndView.h */,
+				51C93A8F205259550009A52C /* MBLiveEndView.m */,
+				51C93A9620525B360009A52C /* MBLiveEndView.xib */,
+				51C93A9320525B1B0009A52C /* MBSafeObject.h */,
+				51C93A9420525B1B0009A52C /* MBSafeObject.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -777,6 +790,7 @@
 				51B93A44204E90FB00631AAF /* MBHotCell.xib in Resources */,
 				51F5754C204D2BE50030CFD1 /* loginmovie.mp4 in Resources */,
 				51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */,
+				51C93A9720525B360009A52C /* MBLiveEndView.xib in Resources */,
 				51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */,
 				5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */,
 				51F8D8ED2048E8F000B9A10C /* Main.storyboard in Resources */,
@@ -901,6 +915,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */,
+				51C93A9520525B1B0009A52C /* MBSafeObject.m in Sources */,
 				51ED0023204F8B8000B9C7AF /* MBBannerView.m in Sources */,
 				51093C6D2051262900C4FFEA /* MBUserView.m in Sources */,
 				51ED001F204F8AFA00B9C7AF /* MBHotADCell.m in Sources */,
@@ -939,6 +954,7 @@
 				510848972051089900A30BBF /* MBLiveCell.m in Sources */,
 				5108489A205109D800A30BBF /* MBBottomToolView.m in Sources */,
 				51ED0018204F865B00B9C7AF /* UIImageView+MBExtension.m in Sources */,
+				51C93A90205259550009A52C /* MBLiveEndView.m in Sources */,
 				51F8D92E20492C9B00B9A10C /* MBProfileViewController.m in Sources */,
 				51B93A2F204E852600631AAF /* MBHomeLiveModel.m in Sources */,
 				51F8D92520492C5D00B9A10C /* MBFollowViewController.m in Sources */,
