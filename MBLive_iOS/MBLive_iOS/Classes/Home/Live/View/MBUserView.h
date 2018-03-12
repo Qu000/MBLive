@@ -11,7 +11,7 @@
 @interface MBUserView : UIView
 + (instancetype)userView;
 /** 点击关闭 */
-@property (nonatomic, copy) void (^closeBlock)();
+@property (nonatomic, copy) void (^closeBlock)(void);
 /** 用户信息 */
 @property (nonatomic, strong) MBUser *user;
 @end

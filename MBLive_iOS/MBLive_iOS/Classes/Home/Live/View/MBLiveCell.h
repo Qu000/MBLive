@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class MBHomeLiveModel,MBUser;
+@class MBHomeLiveModel;//MBUser
 @interface MBLiveCell : UICollectionViewCell
 /** 直播*/
 @property (nonatomic, strong) MBHomeLiveModel * live;

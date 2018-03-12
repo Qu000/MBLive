@@ -13,6 +13,7 @@
 		5105C8C5204E3E66000848CD /* UIDevice+MBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5105C8C4204E3E66000848CD /* UIDevice+MBExtension.m */; };
 		5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */; };
 		5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5105C8C9204E4152000848CD /* MBLiveViewController.storyboard */; };
+		5106677F20565689008341D9 /* MBLiveFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5106677E20565689008341D9 /* MBLiveFlowLayout.m */; };
 		510848942050D79E00A30BBF /* MBLiveVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848932050D79E00A30BBF /* MBLiveVc.m */; };
 		510848972051089900A30BBF /* MBLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 510848962051089900A30BBF /* MBLiveCell.m */; };
 		5108489A205109D800A30BBF /* MBBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51084899205109D800A30BBF /* MBBottomToolView.m */; };
@@ -105,6 +106,8 @@
 		5105C8C6204E3FB5000848CD /* NSObject+MBHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MBHUD.h"; sourceTree = "<group>"; };
 		5105C8C7204E3FB5000848CD /* NSObject+MBHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MBHUD.m"; sourceTree = "<group>"; };
 		5105C8C9204E4152000848CD /* MBLiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MBLiveViewController.storyboard; sourceTree = "<group>"; };
+		5106677D20565689008341D9 /* MBLiveFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveFlowLayout.h; sourceTree = "<group>"; };
+		5106677E20565689008341D9 /* MBLiveFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveFlowLayout.m; sourceTree = "<group>"; };
 		510848922050D79E00A30BBF /* MBLiveVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveVc.h; sourceTree = "<group>"; };
 		510848932050D79E00A30BBF /* MBLiveVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveVc.m; sourceTree = "<group>"; };
 		510848952051089900A30BBF /* MBLiveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveCell.h; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 			children = (
 				510848952051089900A30BBF /* MBLiveCell.h */,
 				510848962051089900A30BBF /* MBLiveCell.m */,
+				5106677D20565689008341D9 /* MBLiveFlowLayout.h */,
+				5106677E20565689008341D9 /* MBLiveFlowLayout.m */,
 				51084898205109D800A30BBF /* MBBottomToolView.h */,
 				51084899205109D800A30BBF /* MBBottomToolView.m */,
 				51093C6B2051262900C4FFEA /* MBUserView.h */,
@@ -522,10 +527,10 @@
 		51F8D90A204929DA00B9A10C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5108488F2050D75800A30BBF /* Live */,
 				51B93A32204E8C8D00631AAF /* View */,
 				51B93A2C204E84C900631AAF /* Model */,
 				51F8D91B20492B4100B9A10C /* Controller */,
+				5108488F2050D75800A30BBF /* Live */,
 				51B93A3D204E908800631AAF /* Hot */,
 				51ED0027204FBD4500B9C7AF /* New */,
 				51ED002C204FBDAA00B9C7AF /* Follow */,
@@ -924,6 +929,7 @@
 				51ED003F204FE24600B9C7AF /* MBNewFlowLayout.m in Sources */,
 				51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */,
 				510848942050D79E00A30BBF /* MBLiveVc.m in Sources */,
+				5106677F20565689008341D9 /* MBLiveFlowLayout.m in Sources */,
 				51C93A8620521C430009A52C /* MBCatEarView.m in Sources */,
 				51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,

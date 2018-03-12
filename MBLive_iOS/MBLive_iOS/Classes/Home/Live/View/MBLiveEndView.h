@@ -12,7 +12,7 @@
 
 + (instancetype)liveEndView;
 /** 查看其他主播 */
-@property (nonatomic, copy) void (^lookOtherBlock)();
+@property (nonatomic, copy) void (^lookOtherBlock)(void);
 /** 退出 */
-@property (nonatomic, copy) void (^quitBlock)();
+@property (nonatomic, copy) void (^quitBlock)(void);
 @end

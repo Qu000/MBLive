@@ -11,6 +11,7 @@
 #import "MBHotADCell.h"
 #import "MBRefresh.h"
 #import "MBWebVc.h"
+#import "MBLiveVc.h"
 
 #import "MBHomeLiveModel.h"
 #import "MBHotADModel.h"
@@ -147,5 +148,9 @@ static NSString *ADReuseIdentifier = @"MBHotADCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    MBLiveVc *liveVc = [[MBLiveVc alloc]init];
+    liveVc.lives = self.lives;
+    liveVc.currentIndex = indexPath.row - 1;
+    [self presentViewController:liveVc animated:YES completion:nil];
 }
 @end
