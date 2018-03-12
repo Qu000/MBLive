@@ -10,6 +10,9 @@
 
 @interface MBFollowVc ()
 
+/** 背景图 */
+@property(nonatomic, weak) UIImageView *bgImage;
+
 @end
 
 @implementation MBFollowVc
@@ -17,22 +20,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    [self setupUI];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI{
+   
+    [self setupImage];
+    [self setupRemindLab];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/** 背景图片 */
+- (void)setupImage{
+    
+    UIImageView * bgImage = [[UIImageView alloc]init];
+    bgImage.image = [UIImage imageNamed:@"no_follow_250x247"];
+    [bgImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@96);
+        make.width.height.equalTo(@250);
+        make.centerX.equalTo(self.view);
+    }];
+    [self.view addSubview:bgImage];
+    self.bgImage = bgImage;
+    
 }
-*/
-
+/** 提示信息 */
+- (void)setupRemindLab{
+    UILabel * remindLab = [[UILabel alloc]init];
+    remindLab.text = @"你关注的主播还没有开播呐";
+    remindLab.textColor = [UIColor whiteColor];
+    remindLab.textAlignment = NSTextAlignmentCenter;
+    remindLab.font = [UIFont systemFontOfSize:15];
+    remindLab.backgroundColor = [UIColor clearColor];
+    [remindLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.bgImage);
+        make.left.right.equalTo(@30);
+        make.height.equalTo(@22);
+    }];
+    [self.view addSubview:remindLab];
+}
 @end
