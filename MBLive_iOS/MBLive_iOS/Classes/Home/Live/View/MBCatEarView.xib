@@ -16,31 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sF-aU-Dpn">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sF-aU-Dpn">
                     <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="public_catEar_98x25" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-sY-3dn">
-                            <rect key="frame" x="0.0" y="0.0" width="98" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="98" id="Jkm-Fx-Ju5"/>
-                                <constraint firstAttribute="height" constant="25" id="pKP-6g-D7x"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="Evc-sY-3dn" firstAttribute="top" secondItem="0sF-aU-Dpn" secondAttribute="top" id="V0H-AD-gYu"/>
-                        <constraint firstAttribute="trailing" secondItem="Evc-sY-3dn" secondAttribute="trailing" id="apU-U2-kTQ"/>
-                        <constraint firstItem="Evc-sY-3dn" firstAttribute="leading" secondItem="0sF-aU-Dpn" secondAttribute="leading" id="jsG-YR-BgD"/>
-                    </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="public_catEar_98x25" translatesAutoresizingMaskIntoConstraints="NO" id="Evc-sY-3dn">
+                    <rect key="frame" x="0.0" y="0.0" width="98" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="QZF-pb-ZwK"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="0sF-aU-Dpn" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Dwo-kd-NbN"/>
-                <constraint firstItem="0sF-aU-Dpn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Zx6-8s-hWG"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0sF-aU-Dpn" secondAttribute="bottom" id="a0y-mC-emR"/>
-                <constraint firstItem="0sF-aU-Dpn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gQO-nn-7CJ"/>
+                <constraint firstItem="Evc-sY-3dn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fa7-sX-9le"/>
+                <constraint firstItem="Evc-sY-3dn" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hSY-Nc-neb"/>
+                <constraint firstItem="Evc-sY-3dn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="we3-x8-ddx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -48,11 +40,6 @@
                 <outlet property="playView" destination="0sF-aU-Dpn" id="X8L-Ko-Wwo"/>
             </connections>
         </view>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yeG-Xx-E93">
-            <rect key="frame" x="0.0" y="0.0" width="252" height="112"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="162" y="92"/>
-        </imageView>
     </objects>
     <resources>
         <image name="public_catEar_98x25" width="98" height="25"/>
