@@ -324,7 +324,7 @@
 - (void)imageClick {
     if (self.imageClickBlock) {
         self.imageClickBlock(self.currIndex);
-    } else if ([_delegate respondsToSelector:@selector(MBBannerView:clickImageAtIndex:)]){
+    } else if ([_delegate respondsToSelector:@selector(carouselView:clickImageAtIndex:)]){
         [_delegate carouselView:self clickImageAtIndex:self.currIndex];
     }
 }

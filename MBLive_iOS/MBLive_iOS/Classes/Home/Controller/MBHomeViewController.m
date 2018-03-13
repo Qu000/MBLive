@@ -36,11 +36,19 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.selectedView.hidden = NO;
     if (!_selectedView) {
         [self setupTopMenu];
     }
 }
- 
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    self.selectedView.hidden = YES;
+    
+}
 
 - (void)loadView{
     
