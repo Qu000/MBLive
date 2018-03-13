@@ -41,6 +41,10 @@
     //包裹一个自定义的导航栏
     MBNavigationController * nav = [[MBNavigationController alloc]initWithRootViewController:childController];
     
+    if (![title isEqualToString:@"首页"]) {
+        childController.navigationItem.title = title;
+    }
+
     //设置tabBarItem的title
     childController.tabBarItem.title = title;
 
