@@ -13,6 +13,7 @@
 #import "MBRefresh.h"
 #import "MBAnchorViewCell.h"
 
+#import "MBLiveVc.h"
 
 @interface MBNewVc ()
 /** 最新主播列表 */
@@ -134,7 +135,24 @@ static NSString * const reuseIdentifier = @"MBAnchorViewCell";
 }
 
 #pragma mark <UICollectionViewDelegate>
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    MBLiveVc * liveVc = [[MBLiveVc alloc]init];
+    NSMutableArray * array = [NSMutableArray array];
+    for (MBUser *user in self.anchors) {
+        MBHomeLiveModel *live = [[MBHomeLiveModel alloc]init];
+        live.bigpic = user.photo;
+        live.myname = user.nickname;
+        live.smallpic = user.photo;
+        live.gps = user.position;
+        live.useridx = user.useridx;
+        live.allnum = arc4random_uniform(666);
+        live.flv = user.flv;
+        [array addObject:live];
+    }
+    liveVc.lives = array;
+    liveVc.currentIndex = indexPath.item;
+    [self presentViewController:liveVc animated:YES completion:nil];
+}
 
 
 @end

@@ -58,7 +58,7 @@
 - (void)setupRemindLab{
     UILabel * remindLab = [[UILabel alloc]init];
     remindLab.text = @"你关注的主播还没有开播呐";
-    remindLab.textColor = [UIColor whiteColor];
+    remindLab.textColor = KeyColor;
     remindLab.textAlignment = NSTextAlignmentCenter;
     remindLab.font = [UIFont systemFontOfSize:18];
     remindLab.backgroundColor = [UIColor clearColor];
@@ -82,7 +82,7 @@
 - (void)setupSeeBtn{
     UIButton * seeBtn = [[UIButton alloc]init];
     [seeBtn setTitle:@"去看看当前热门直播" forState:UIControlStateNormal];
-    seeBtn.tintColor = [UIColor whiteColor];
+    [seeBtn setTitleColor:KeyColor forState:UIControlStateNormal];
     seeBtn.backgroundColor = [UIColor clearColor];
     seeBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [seeBtn addTarget:self action:@selector(clickSeeBtn) forControlEvents:UIControlEventTouchUpInside];
