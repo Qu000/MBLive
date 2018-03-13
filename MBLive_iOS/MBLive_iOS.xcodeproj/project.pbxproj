@@ -81,6 +81,8 @@
 		51F8D931204A698500B9A10C /* MBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D930204A698500B9A10C /* MBTabBarController.m */; };
 		51F8D934204A8CAD00B9A10C /* MBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D933204A8CAD00B9A10C /* MBNavigationController.m */; };
 		51F8D938204AA0E100B9A10C /* MBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D937204AA0E100B9A10C /* MBLoginViewController.m */; };
+		51FC2BC82057B7D800FDEE30 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51FC2BC62057B7D800FDEE30 /* user.plist */; };
+		51FC2BC92057B7D800FDEE30 /* danmu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51FC2BC72057B7D800FDEE30 /* danmu.plist */; };
 		FDBB1804FCEFDCD295F1A90E /* libPods-MBLive_iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0E199A34D1837402679FA /* libPods-MBLive_iOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -221,6 +223,8 @@
 		51F8D933204A8CAD00B9A10C /* MBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBNavigationController.m; sourceTree = "<group>"; };
 		51F8D936204AA0E100B9A10C /* MBLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLoginViewController.h; sourceTree = "<group>"; };
 		51F8D937204AA0E100B9A10C /* MBLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLoginViewController.m; sourceTree = "<group>"; };
+		51FC2BC62057B7D800FDEE30 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
+		51FC2BC72057B7D800FDEE30 /* danmu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = danmu.plist; sourceTree = "<group>"; };
 		8C61D1668BCB414A5A1A8A80 /* libPods-MBLive_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MBLive_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23421D7DD3A76751E2BE80F /* Pods-MBLive_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBLive_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBLive_iOS/Pods-MBLive_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B77457B2AEDD3F5DF8265FDF /* Pods-MBLive_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBLive_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBLive_iOS/Pods-MBLive_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -458,6 +462,8 @@
 		51F57549204D2BB90030CFD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				51FC2BC72057B7D800FDEE30 /* danmu.plist */,
+				51FC2BC62057B7D800FDEE30 /* user.plist */,
 				51F5754B204D2BE50030CFD1 /* login_video.mp4 */,
 				51F5754A204D2BE50030CFD1 /* loginmovie.mp4 */,
 			);
@@ -788,6 +794,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FC2BC92057B7D800FDEE30 /* danmu.plist in Resources */,
 				51F8D8F22048E8F000B9A10C /* LaunchScreen.storyboard in Resources */,
 				51F8D8EF2048E8F000B9A10C /* Assets.xcassets in Resources */,
 				51ED003C204FDE0900B9C7AF /* MBAnchorViewCell.xib in Resources */,
@@ -797,6 +804,7 @@
 				51C93A8820521C5A0009A52C /* MBCatEarView.xib in Resources */,
 				51C93A9720525B360009A52C /* MBLiveEndView.xib in Resources */,
 				51F5754D204D2BE50030CFD1 /* login_video.mp4 in Resources */,
+				51FC2BC82057B7D800FDEE30 /* user.plist in Resources */,
 				5105C8CA204E4152000848CD /* MBLiveViewController.storyboard in Resources */,
 				51F8D8ED2048E8F000B9A10C /* Main.storyboard in Resources */,
 				51093C712051267800C4FFEA /* MBUserView.xib in Resources */,
@@ -1116,6 +1124,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L9687TNJ7S;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MBLive_iOS/Classes/Other",
@@ -1138,6 +1147,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L9687TNJ7S;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MBLive_iOS/Classes/Other",

@@ -64,7 +64,7 @@
     remindLab.backgroundColor = [UIColor clearColor];
     CGFloat M = 30;
     CGFloat W = self.view.width - 2*M;
-    CGFloat Y = CGRectGetMaxY(self.bgImage.frame)+30;
+    CGFloat Y = CGRectGetMaxY(self.bgImage.frame)+15;
     CGFloat H = 22;
     remindLab.frame = CGRectMake(M, Y, W, H);
     [self.view addSubview:remindLab];
@@ -89,7 +89,7 @@
     seeBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     CGFloat M = 30;
     CGFloat W = self.view.width - 2*M;
-    CGFloat Y = CGRectGetMaxY(self.remindLab.frame)+30;
+    CGFloat Y = CGRectGetMaxY(self.remindLab.frame)+10;
     CGFloat H = 22;
     seeBtn.frame = CGRectMake(M, Y, W, H);
     [self.view addSubview:seeBtn];

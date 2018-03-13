@@ -18,6 +18,7 @@
 @implementation MBFollowViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     [self setupUI];
@@ -56,14 +57,14 @@
     remindLab.backgroundColor = [UIColor clearColor];
     CGFloat M = 30;
     CGFloat W = self.view.width - 2*M;
-    CGFloat Y = CGRectGetMaxY(self.bgImage.frame)+30;
+    CGFloat Y = CGRectGetMaxY(self.bgImage.frame)+15;
     CGFloat H = 22;
     remindLab.frame = CGRectMake(M, Y, W, H);
     [self.view addSubview:remindLab];
     self.remindLab = remindLab;
 
     
-    [self setupSeeBtn];
+//    [self setupSeeBtn];
 }
 - (void)setupSeeBtn{
     UIButton * seeBtn = [[UIButton alloc]init];
@@ -76,7 +77,7 @@
     seeBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     CGFloat M = 30;
     CGFloat W = self.view.width - 2*M;
-    CGFloat Y = CGRectGetMaxY(self.remindLab.frame)+30;
+    CGFloat Y = CGRectGetMaxY(self.remindLab.frame)+10;
     CGFloat H = 22;
     seeBtn.frame = CGRectMake(M, Y, W, H);
     [self.view addSubview:seeBtn];

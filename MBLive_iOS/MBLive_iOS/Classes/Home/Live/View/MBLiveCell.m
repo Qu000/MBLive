@@ -68,20 +68,22 @@ bool _isSelected = NO;
                 case LiveToolTypePublicTalk:
                     _isSelected = !_isSelected;
                     _isSelected ? [_renderer start] : [_renderer stop];
+                    NSLog(@"弹幕");
                     break;
                 case LiveToolTypePrivateTalk:
-                    
+                    NSLog(@"私聊");
                     break;
                 case LiveToolTypeGift:
-                    
+                    NSLog(@"礼物");
                     break;
                 case LiveToolTypeRank:
-                    
+                    NSLog(@"打商榜");
                     break;
                 case LiveToolTypeShare:
-                    
+                    NSLog(@"分享");
                     break;
                 case LiveToolTypeClose:
+                    NSLog(@"退出直播间");
                     [self quit];
                     break;
                 default:
@@ -91,7 +93,7 @@ bool _isSelected = NO;
         [self.contentView insertSubview:toolView aboveSubview:self.placeHolderView];
         [toolView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(@0);
-            make.bottom.equalTo(@-10);
+            make.bottom.equalTo(@-20);
             make.height.equalTo(@40);
         }];
         _toolView = toolView;
@@ -162,7 +164,7 @@ bool _isSelected = NO;
         // 渲染模式
         emitterLayer.renderMode = kCAEmitterLayerUnordered;
         // 开启三维效果
-        //    _emitterLayer.preservesDepth = YES;
+        // _emitterLayer.preservesDepth = YES;
         NSMutableArray *array = [NSMutableArray array];
         // 创建粒子
         for (int i = 0; i<10; i++) {

@@ -21,8 +21,13 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+/**
+ * Masonry使用方法
+ * http://adad184.com/2014/09/28/use-masonry-to-quick-solve-autolayout/
+ */
 
 #import <Masonry.h>
+
 #import "UIViewController+MBHUD.h"
 #import "NSObject+MBHUD.h"
 #import "UIView+MBExtension.h"

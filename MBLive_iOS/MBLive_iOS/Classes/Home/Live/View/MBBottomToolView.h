@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, LiveToolType) {
+    ///弹幕
     LiveToolTypePublicTalk,
+    ///私聊
     LiveToolTypePrivateTalk,
+    ///礼物
     LiveToolTypeGift,
+    ///打赏排行榜
     LiveToolTypeRank,
+    ///分享
     LiveToolTypeShare,
+    ///关闭-退出直播间
     LiveToolTypeClose
 };
 

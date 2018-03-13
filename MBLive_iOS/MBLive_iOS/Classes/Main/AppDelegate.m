@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MBLoginViewController.h"
+#import "MBTopWindow.h"
 
 @interface AppDelegate ()
 
