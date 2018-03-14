@@ -51,7 +51,7 @@ static NSString *ADReuseIdentifier = @"MBHotADCell";
     self.tableView.mj_header = [MBRefresh headerWithRefreshingBlock:^{
         self.lives = [NSMutableArray array];
         self.currentPage = 1;
-        
+        NSLog(@"刷新最热主播界面");
         [self getTopAD];
         [self getHotLiveList];
     }];
