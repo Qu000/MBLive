@@ -28,7 +28,7 @@ static NSString *reuseIdentifier = @"MBHotCell";
 static NSString *ADReuseIdentifier = @"MBHotADCell";
 @implementation MBHotVc
 
-
+//no_fans_250x193
 - (NSMutableArray *)lives
 {
     if (!_lives) {
