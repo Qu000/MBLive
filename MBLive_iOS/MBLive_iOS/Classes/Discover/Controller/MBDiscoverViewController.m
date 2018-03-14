@@ -2,36 +2,94 @@
 //  MBDiscoverViewController.m
 //  MBLive_iOS
 //
-//  Created by qujiahong on 2018/3/2.
+//  Created by qujiahong on 2018/3/14.
 //  Copyright © 2018年 瞿嘉洪. All rights reserved.
 //
 
 #import "MBDiscoverViewController.h"
+#import "MBHotCell.h"
+#import "MBHomeLiveModel.h"
+#import "MBLiveVc.h"
 
-@interface MBDiscoverViewController ()
+static NSString *reuseIdentifier = @"MBHotCell";
 
+@interface MBDiscoverViewController ()<UITableViewDelegate,UITableViewDataSource>
+/** TableView */
+@property(nonatomic, weak) UITableView *tableView;
+/** 数据源*/
+@property (nonatomic, strong) NSMutableArray * dataList;
 @end
 
 @implementation MBDiscoverViewController
 
+#warning waite........
+- (NSMutableArray *)dataList {
+    
+    if (!_dataList) {
+        _dataList = [NSMutableArray array];
+    }
+    return _dataList;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupUI];
+    
+    [self loadData];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI{
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MBHotCell class]) bundle:nil] forCellReuseIdentifier:reuseIdentifier];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+- (void)loadData{
+    MBHomeLiveModel * live = [[MBHomeLiveModel alloc]init];
+    live.smallpic = @"";
+    live.myname = @"福尔摩洪";
+    live.gps = @"在重庆";
+    live.bigpic = @"";
+//    live.starlevel = ;
+//    live.starImage ;
+    live.allnum = 6666;
+    live.flv = @"";
+    [self.dataList addObject:live];
+    [self.tableView reloadData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.dataList.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //    JHLiveCell * cell = [[[NSBundle mainBundle] loadNibNamed:@"JHLiveCell" owner:self options:nil] lastObject];
+    
+    MBHotCell * cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
+    cell.model = self.dataList[indexPath.row];
+    
+    return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 465 ;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+//    MBHomeLiveModel * live = self.dataList[indexPath.row];
+    
+    MBLiveVc * playerVc = [[MBLiveVc alloc]init];
+    playerVc.lives = self.dataList;//传值
+    
+    [self.navigationController pushViewController:playerVc animated:YES];
+    
+}
 
 @end

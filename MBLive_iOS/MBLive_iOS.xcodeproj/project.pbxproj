@@ -19,6 +19,7 @@
 		5108489A205109D800A30BBF /* MBBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51084899205109D800A30BBF /* MBBottomToolView.m */; };
 		51093C6D2051262900C4FFEA /* MBUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51093C6C2051262900C4FFEA /* MBUserView.m */; };
 		51093C712051267800C4FFEA /* MBUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51093C702051267800C4FFEA /* MBUserView.xib */; };
+		515E41D020591EA000D42770 /* MBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 515E41CF20591EA000D42770 /* MBDiscoverViewController.m */; };
 		51B939F0204E738C00631AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939EE204E738C00631AAF /* Reachability.m */; };
 		51B939F5204E74B300631AAF /* MBNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F4204E74B300631AAF /* MBNetworkTool.m */; };
 		51B939F8204E762D00631AAF /* MBTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B939F7204E762D00631AAF /* MBTopWindow.m */; };
@@ -76,7 +77,6 @@
 		51F8D92220492BE100B9A10C /* MBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D92120492BE100B9A10C /* MBHomeViewController.m */; };
 		51F8D92520492C5D00B9A10C /* MBFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D92420492C5D00B9A10C /* MBFollowViewController.m */; };
 		51F8D92820492C6900B9A10C /* MBLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D92720492C6900B9A10C /* MBLiveViewController.m */; };
-		51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D92A20492C7500B9A10C /* MBDiscoverViewController.m */; };
 		51F8D92E20492C9B00B9A10C /* MBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D92D20492C9B00B9A10C /* MBProfileViewController.m */; };
 		51F8D931204A698500B9A10C /* MBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D930204A698500B9A10C /* MBTabBarController.m */; };
 		51F8D934204A8CAD00B9A10C /* MBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F8D933204A8CAD00B9A10C /* MBNavigationController.m */; };
@@ -119,6 +119,8 @@
 		51093C6B2051262900C4FFEA /* MBUserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBUserView.h; sourceTree = "<group>"; };
 		51093C6C2051262900C4FFEA /* MBUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBUserView.m; sourceTree = "<group>"; };
 		51093C702051267800C4FFEA /* MBUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MBUserView.xib; sourceTree = "<group>"; };
+		515E41CE20591EA000D42770 /* MBDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBDiscoverViewController.h; sourceTree = "<group>"; };
+		515E41CF20591EA000D42770 /* MBDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBDiscoverViewController.m; sourceTree = "<group>"; };
 		51B939EE204E738C00631AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		51B939EF204E738C00631AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		51B939F3204E74B300631AAF /* MBNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBNetworkTool.h; sourceTree = "<group>"; };
@@ -213,8 +215,6 @@
 		51F8D92420492C5D00B9A10C /* MBFollowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBFollowViewController.m; sourceTree = "<group>"; };
 		51F8D92620492C6900B9A10C /* MBLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBLiveViewController.h; sourceTree = "<group>"; };
 		51F8D92720492C6900B9A10C /* MBLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBLiveViewController.m; sourceTree = "<group>"; };
-		51F8D92920492C7500B9A10C /* MBDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBDiscoverViewController.h; sourceTree = "<group>"; };
-		51F8D92A20492C7500B9A10C /* MBDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBDiscoverViewController.m; sourceTree = "<group>"; };
 		51F8D92C20492C9B00B9A10C /* MBProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProfileViewController.h; sourceTree = "<group>"; };
 		51F8D92D20492C9B00B9A10C /* MBProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProfileViewController.m; sourceTree = "<group>"; };
 		51F8D92F204A698500B9A10C /* MBTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTabBarController.h; sourceTree = "<group>"; };
@@ -336,6 +336,13 @@
 				51C93A9620525B360009A52C /* MBLiveEndView.xib */,
 				51C93A9320525B1B0009A52C /* MBSafeObject.h */,
 				51C93A9420525B1B0009A52C /* MBSafeObject.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		515E41D1205920E100D42770 /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -547,6 +554,7 @@
 		51F8D90B204929DA00B9A10C /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				515E41D1205920E100D42770 /* View */,
 				51F8D91E20492B8400B9A10C /* Controller */,
 			);
 			path = Discover;
@@ -670,8 +678,8 @@
 		51F8D91E20492B8400B9A10C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				51F8D92920492C7500B9A10C /* MBDiscoverViewController.h */,
-				51F8D92A20492C7500B9A10C /* MBDiscoverViewController.m */,
+				515E41CE20591EA000D42770 /* MBDiscoverViewController.h */,
+				515E41CF20591EA000D42770 /* MBDiscoverViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -927,6 +935,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515E41D020591EA000D42770 /* MBDiscoverViewController.m in Sources */,
 				51B93A3C204E8FE000631AAF /* MBHotVc.m in Sources */,
 				51C93A9520525B1B0009A52C /* MBSafeObject.m in Sources */,
 				51ED0023204F8B8000B9C7AF /* MBBannerView.m in Sources */,
@@ -941,7 +950,6 @@
 				51C93A8620521C430009A52C /* MBCatEarView.m in Sources */,
 				51ED003B204FDE0900B9C7AF /* MBAnchorViewCell.m in Sources */,
 				5105C8C8204E3FB5000848CD /* NSObject+MBHUD.m in Sources */,
-				51F8D92B20492C7500B9A10C /* MBDiscoverViewController.m in Sources */,
 				51ED0030204FBE0100B9C7AF /* MBFollowVc.m in Sources */,
 				51ED0015204F85D500B9C7AF /* UIViewController+MBExtension.m in Sources */,
 				51C93A8B205225B30009A52C /* MBLiveAnchorView.m in Sources */,

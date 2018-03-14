@@ -82,7 +82,7 @@ static NSString * const reuseIdentifier = @"MBAnchorViewCell";
         [self getAnchorsList];
     }];
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        self.currentPage++;
+        self .currentPage++;
         [self getAnchorsList];
     }];
     [self.collectionView.mj_header beginRefreshing];
