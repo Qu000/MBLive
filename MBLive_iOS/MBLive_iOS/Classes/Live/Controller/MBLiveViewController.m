@@ -7,8 +7,14 @@
 //
 
 #import "MBLiveViewController.h"
+#import <LFLiveKit.h>
 
 @interface MBLiveViewController ()
+
+/** RTMP地址 */
+@property (nonatomic, copy) NSString *rtmpUrl;
+@property (nonatomic, strong) LFLiveSession *session;
+@property (nonatomic, weak) UIView *livingPreView;
 
 @end
 
