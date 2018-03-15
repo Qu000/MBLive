@@ -9,7 +9,7 @@
 #import "MBLiveViewController.h"
 #import <LFLiveKit.h>
 
-@interface MBLiveViewController ()
+@interface MBLiveViewController ()<LFLiveSessionDelegate>
 
 /** RTMP地址 */
 @property (nonatomic, copy) NSString *rtmpUrl;
@@ -19,6 +19,38 @@
 @end
 
 @implementation MBLiveViewController
+
+- (UIView *)livingPreView
+{
+    if (!_livingPreView) {
+        UIView *livingPreView = [[UIView alloc] initWithFrame:self.view.bounds];
+        livingPreView.backgroundColor = [UIColor clearColor];
+        livingPreView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [self.view insertSubview:livingPreView atIndex:0];
+        _livingPreView = livingPreView;
+    }
+    return _livingPreView;
+}
+
+- (LFLiveSession*)session{
+    if(!_session){
+        /*
+         默认分辨率368 ＊ 640  音频：44.1 iphone6以上48  双声道  方向竖屏
+         */
+        /*
+         LFLiveVideoQuality_Medium2分辨率： 540 *960 帧数：24 码率：800Kps
+         */
+        _session = [[LFLiveSession alloc]initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfigurationForQuality:LFLiveVideoQuality_Medium2]];
+        
+        
+        // 设置代理
+        _session.delegate = self;
+        _session.running = YES;
+        _session.preView = self.livingPreView;
+    }
+    return _session;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
